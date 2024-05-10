@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Chart from "./components/chart/chart";
+import ChartComponent from "./components/chart/chart";
 import {
   IconButton,
   Typography,
@@ -21,26 +21,35 @@ export default function Home() {
         justifyContent: "center",
         alignItems: "center",
         background: "linear-gradient(to bottom, #ff69b4, #800080)",
-        padding:'25px'
+        padding: "25px",
       }}
     >
       <Paper elevation={3} className="p-6 rounded-lg shadow-lg bg-white">
-        <IconButton 
-        sx={{
-          color:'white',
-          float:'right',
-          background:'red '
-        }}
-        aria-label="close">
+        <IconButton
+          sx={{
+            color: "white",
+            float: "right",
+            background: "red ",
+          }}
+          aria-label="close"
+        >
           <CloseIcon />
         </IconButton>
-        <Typography variant="h5" gutterBottom className="text-center text-purple-800">
-          CURRENCY CONVERTER 
+        <Typography
+          variant="h5"
+          gutterBottom
+          className="text-center text-purple-800"
+        >
+          CURRENCY CONVERTER
         </Typography>
-        <Typography variant="p" gutterBottom className="text-center text-gray-300">
-           1 dhs equals
+        <Typography
+          variant="p"
+          gutterBottom
+          className="text-center text-gray-300"
+        >
+          1 dhs equals
         </Typography>
-        <form className="p-24 bg-white rounded  rounded-lg">
+        <form className="p-24 bg-white rounded  rounded-lg m-0">
           <div className="mb-4">
             <TextField label="" variant="outlined" fullWidth required />
           </div>
@@ -56,9 +65,8 @@ export default function Home() {
             Enviar
           </Button>
         </form>
-        <Chart className="bg-pink-200"/>
+        <ChartComponent className="bg-pink-200 m-0" />
       </Paper>
     </Container>
   );
-};
-
+}
